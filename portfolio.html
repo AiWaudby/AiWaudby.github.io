@@ -10,12 +10,55 @@
         <a href="portfolio.html"class="button">Portfolio</a>
         <a href="all_about_me.html"class="button">all About me!</a>
         <a href="Career.html"class="button">Career</button></a>
+        <html>
+
+
         <h1>This is my Portfolio Page!</h1>
-        <iframe src="https://jamesbmadden.github.io/scratch-silicon/#294915885" width="480px" height="480px" allowFullscreen></iframe>
-        <img src="/images/wolf_with_roses.png" height="250">
-        <br>
-        <a target="_blank" href="https://scratch.mit.edu">
-            <img src="images/Scratch.png" height="100">
-        </a>
+        <center> 
+
+<a href="javascript:switchTab('tb_1', 'content_1');" id="tb_1" class="tabmenu active"><button>Personal</button></a>
+<a href="javascript:switchTab('tb_2', 'content_2');" id="tb_2" class="tabmenu"><button>Professinel</button></a>
+
+</center>
+
+<div id="content_1" class="tabcontent"> 
+<p>I'm a student at C.E. King School I'm apart of a endorents known as STEM (science,Technology,Engeering, and Mathematics). My favorite animal are wolves and My favorite hobby is drawing and coloring.  </p>
+
+</div> 
+
+<div id="content_2" class="tabcontent" style="display:none;">
+    <p>This is my computer science project </p>
+    <iframe src="https://jamesbmadden.github.io/scratch-silicon/#294915885" width="480px" height="480px" allowFullscreen></iframe>
+    <img src="images/wolf_with_roses.png" height="250">
+    <br>
+    <a target="_blank" href="https://scratch.mit.edu">
+        <img src="images/Scratch.png" height="100">
+    </a>
+<button>Download Resume</button>
+</div>
+
+</div>
+
     </body>
+    
+    <script>
+function switchTab(tab_id, tab_content) {
+// first of all we get all tab content blocks (I think the best way to get them by class names)
+var x = document.getElementsByClassName("tabcontent");
+var i;
+for (i = 0; i < x.length; i++) {
+x[i].style.display = 'none'; // hide all tab content
+}
+document.getElementById(tab_content).style.display = 'block'; // display the content of the tab we need
+
+// now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+var x = document.getElementsByClassName("tabmenu");
+var i;
+for (i = 0; i < x.length; i++) {
+x[i].className = 'tabmenu'; 
+}
+document.getElementById(tab_id).className = 'tm_active';
+}
+</script>
+
 </html>
